@@ -1,17 +1,17 @@
 @echo off
 
-echo 免責事項
-echo 本スクリプトの使用によって発生した、いかなる損害に対しても開発者は一切の責任を負いません
+echo �Ɛӎ���
+echo �{�X�N���v�g�̎g�p�ɂ���Ĕ��������A�����Ȃ鑹�Q�ɑ΂��Ă��J���҂͈�؂̐ӔC�𕉂��܂���
 echo;
 
-echo 利用上の注意
-echo 本スクリプトはStar Citizen Liveバージョンかつ、
-echo インストール先がデフォルトである場合にしか対応しておりません
-echo また、削除対象に表示されたフォルダを中身ごと完全削除しますので、
-echo 表示された対象をよく確認してから削除を実施してください
+echo ���p��̒���
+echo �{�X�N���v�g��Star Citizen Live�o�[�W�������A
+echo �C���X�g�[���悪�f�t�H���g�ł���ꍇ�ɂ����Ή����Ă���܂���
+echo �܂��A�폜�Ώۂɕ\�����ꂽ�t�H���_�𒆐g���Ɗ��S�폜���܂��̂ŁA
+echo �\�����ꂽ�Ώۂ��悭�m�F���Ă���폜�����{���Ă�������
 echo;
 
-echo 作者 
+echo ��� 
 echo Luke514 Twitter:@rx_luke Discord:Shadow514#0642
 echo;
 
@@ -19,36 +19,36 @@ set COUNT=0
 set USRDIR=dir /a:d /s /b C:\PROGRA~1\ROBERT~1\StarCitizen\PTU\USER*
 set SHDDIR=dir /a:d /s /b %APPDATA%\..\Local\STARCI~1\sc-alpha*
 
-echo 削除対象は以下です
+echo �폜�Ώۂ͈ȉ��ł�
 
-echo ユーザーフォルダ
+echo ���[�U�[�t�H���_
 %USRDIR% 2>nul
 if %errorlevel% neq 0 (
-  echo ユーザーフォルダがありません
+  echo ���[�U�[�t�H���_������܂���
   set /a COUNT=%COUNT%+1
 )
 echo;
 
-echo シェーダーフォルダ
+echo �V�F�[�_�[�t�H���_
 %SHDDIR% 2>nul
 if %errorlevel% neq 0 (
-  echo シェーダーフォルダがありません
+  echo �V�F�[�_�[�t�H���_������܂���
   set /a COUNT=%COUNT%+2
 )
 echo;
 
 if %COUNT% equ 3 (
-  echo 削除対象のフォルダが存在しないため、処理を終了します
+  echo �폜�Ώۂ̃t�H���_�����݂��Ȃ����߁A�������I�����܂�
   pause
   EXIT
 )
 
-set /P CHK="削除を実行してもよろしいですか (y/n)？"
+set /P CHK="�폜�����s���Ă���낵���ł��� (y/n)�H"
 
 if /i {%CHK%}=={y} (goto :continue)
 if /i {%CHK%}=={yes} (goto :continue)
 
-echo 削除処理を中止します
+echo �폜�����𒆎~���܂�
 pause
 exit
 
@@ -56,12 +56,12 @@ exit
 
 if %COUNT% neq 1 (
   for /f %%i in ('%USRDIR%') do rmdir /s /q %%i
-  if %errorlevel% lss 2 echo ユーザーフォルダを削除しました
+  if %errorlevel% lss 2 echo ���[�U�[�t�H���_���폜���܂���
 )
 
 if %COUNT% neq 2 (
   for /f %%i in ('%SHDDIR%') do rmdir /s /q %%i
-  if %errorlevel% equ 0 echo シェーダーフォルダを削除しました
+  if %errorlevel% equ 0 echo �V�F�[�_�[�t�H���_���폜���܂���
 )
 
 pause
