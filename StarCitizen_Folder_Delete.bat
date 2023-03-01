@@ -16,7 +16,7 @@ echo Luke514 Twitter:@rx_luke Discord:Shadow514#0642
 echo;
 
 set COUNT=0
-set USRDIR=dir /a:d /s /b C:\PROGRA~1\ROBERT~1\StarCitizen\PTU\USER*
+set USRDIR=dir /a:d /s /b C:\PROGRA~1\ROBERT~1\StarCitizen\LIVE\USER*
 set SHDDIR=dir /a:d /s /b %APPDATA%\..\Local\STARCI~1\sc-alpha*
 
 echo çÌèúëŒè€ÇÕà»â∫Ç≈Ç∑
