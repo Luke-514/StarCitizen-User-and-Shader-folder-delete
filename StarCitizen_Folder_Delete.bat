@@ -6,9 +6,8 @@ echo –{ƒXƒNƒŠƒvƒg‚ÌŽg—p‚É‚æ‚Á‚Ä”­¶‚µ‚½A‚¢‚©‚È‚é‘¹ŠQ‚É‘Î‚µ‚Ä‚àìŽÒ‚ÍˆêØ‚ÌÓ”C‚
 echo;
 
 echo —˜—pã‚Ì’ˆÓ
-echo –{ƒXƒNƒŠƒvƒg‚ÍStar Citizen Liveƒo[ƒWƒ‡ƒ“‚©‚ÂA
-echo ƒCƒ“ƒXƒg[ƒ‹æ‚ªƒfƒtƒHƒ‹ƒg‚Å‚ ‚éê‡‚É‚µ‚©‘Î‰ž‚µ‚Ä‚¨‚è‚Ü‚¹‚ñ
-echo ‚Ü‚½Aíœ‘ÎÛ‚É•\Ž¦‚³‚ê‚½ƒtƒHƒ‹ƒ_‚ð’†g‚²‚ÆŠ®‘Síœ‚µ‚Ü‚·‚Ì‚ÅA
+echo –{ƒXƒNƒŠƒvƒg‚ÍStar Citizen Liveƒo[ƒWƒ‡ƒ“‚ð‘ÎÛ‚É‚µ‚Ä‚¢‚Ü‚·‚ªAƒVƒF[ƒ_[ƒtƒHƒ‹ƒ_‚ÍPTU‚Ì‚à‚Ì‚à“¯Žž‚Éíœ‚µ‚Ü‚·
+echo íœ‘ÎÛ‚É•\Ž¦‚³‚ê‚½ƒtƒHƒ‹ƒ_‚Í’†g‚²‚ÆŠ®‘Síœ‚µ‚Ü‚·‚Ì‚ÅA
 echo •\Ž¦‚³‚ê‚½‘ÎÛ‚ð‚æ‚­Šm”F‚µ‚Ä‚©‚çíœ‚ðŽÀŽ{‚µ‚Ä‚­‚¾‚³‚¢
 echo;
 
@@ -17,11 +16,12 @@ echo Luke514 Twitter:@rx_luke Discord:Shadow514#0642
 echo --------------------------------------------------------------------------------------------------------------
 echo;
 
-set LIBPATH=C:\Program Files\Roberts Space Industries
 set PLYVER=LIVE
 
 set COUNT=0
 
+for /f "tokens=*" %%i in ('findstr /v "{ ( ) js: Error libraryFolder ." %APPDATA%\rsilauncher\log.log ^| findstr "\\"') do set LIBPATH=%%~i
+set LIBPATH=%LIBPATH:\\=\%
 set USRDIR=dir /a:d /s /b "%LIBPATH%\StarCitizen\%PLYVER%\USER"*
 for %%i in ("%LIBPATH%") do set STUSRPATH=%%~si
 set STUSRDIR=dir /a:d /s /b "%STUSRPATH%\StarCitizen\%PLYVER%\USER"*

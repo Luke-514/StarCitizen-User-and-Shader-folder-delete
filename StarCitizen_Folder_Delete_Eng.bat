@@ -6,10 +6,9 @@ echo The author assumes no responsibility for any damages caused by the use of t
 echo;
 
 echo Usage Notes
-echo This script is only supported for the Star Citizen Live version
-echo and the default installation location.
-echo In addition, since the contents of the folder displayed as the target for deletion will be completely deleted, 
-echo please check the displayed target carefully before carrying out the deletion.
+echo This script is for the Star Citizen Live version,
+echo but the shader folder will delete the PTU one at the same time
+echo Folders displayed as targets for deletion will be completely deleted, including their contents.
 echo;
 
 echo author 
@@ -17,11 +16,12 @@ echo Luke514 Twitter:@rx_luke Discord:Shadow514#0642
 echo --------------------------------------------------------------------------------------------------------------
 echo;
 
-set LIBPATH=C:\Program Files\Roberts Space Industries
 set PLYVER=LIVE
 
 set COUNT=0
 
+for /f "tokens=*" %%i in ('findstr /v "{ ( ) js: Error libraryFolder ." %APPDATA%\rsilauncher\log.log ^| findstr "\\"') do set LIBPATH=%%~i
+set LIBPATH=%LIBPATH:\\=\%
 set USRDIR=dir /a:d /s /b "%LIBPATH%\StarCitizen\%PLYVER%\USER"*
 for %%i in ("%LIBPATH%") do set STUSRPATH=%%~si
 set STUSRDIR=dir /a:d /s /b "%STUSRPATH%\StarCitizen\%PLYVER%\USER"*
