@@ -15,9 +15,18 @@ echo author
 echo Luke514 Twitter:@rx_luke Discord:Shadow514#0642
 echo;
 
+set LIBPATH=C:\Program Files\Roberts Space Industries
+set PLAYVER=LIVE
+
 set COUNT=0
-set USRDIR=dir /a:d /s /b C:\PROGRA~1\ROBERT~1\StarCitizen\LIVE\USER*
-set SHDDIR=dir /a:d /s /b %APPDATA%\..\Local\STARCI~1\sc-alpha*
+
+set USRDIR=dir /a:d /s /b "%LIBPATH%\StarCitizen\%PLAYVER%\USER"*
+for %%i in ("%LIBPATH%") do set STUSRPATH=%%~si
+set STUSRDIR=dir /a:d /s /b "%STUSRPATH%\StarCitizen\%PLAYVER%\USER"*
+
+set SHDDIR=dir /a:d /s /b "%APPDATA%\..\Local\Star Citizen\sc-alpha"*
+for %%i in ("%APPDATA%\..\Local\Star Citizen\sc-alpha") do set STSHDPATH=%%~si
+set STSHDDIR=dir /a:d /s /b "%STSHDPATH%"*
 
 echo Subjects for deletion include
 
@@ -55,12 +64,12 @@ exit
 :continue
 
 if %COUNT% neq 1 (
-  for /f %%i in ('%USRDIR%') do rmdir /s /q %%i
+  for /f %%i in ('%STUSRDIR%') do rmdir /s /q %%i
   if %errorlevel% lss 2 echo Deleted user folder
 )
 
 if %COUNT% neq 2 (
-  for /f %%i in ('%SHDDIR%') do rmdir /s /q %%i
+  for /f %%i in ('%STSHDDIR%') do rmdir /s /q %%i
   if %errorlevel% equ 0 echo Deleted shader folder
 )
 
