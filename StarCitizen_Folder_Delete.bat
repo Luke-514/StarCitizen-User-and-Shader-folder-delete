@@ -1,7 +1,8 @@
 @echo off
 
+echo --------------------------------------------------------------------------------------------------------------
 echo 免責事項
-echo 本スクリプトの使用によって発生した、いかなる損害に対しても開発者は一切の責任を負いません
+echo 本スクリプトの使用によって発生した、いかなる損害に対しても作者は一切の責任を負いません
 echo;
 
 echo 利用上の注意
@@ -13,22 +14,24 @@ echo;
 
 echo 作者 
 echo Luke514 Twitter:@rx_luke Discord:Shadow514#0642
+echo --------------------------------------------------------------------------------------------------------------
 echo;
 
 set LIBPATH=C:\Program Files\Roberts Space Industries
-set PLAYVER=LIVE
+set PLYVER=LIVE
 
 set COUNT=0
 
-set USRDIR=dir /a:d /s /b "%LIBPATH%\StarCitizen\%PLAYVER%\USER"*
+set USRDIR=dir /a:d /s /b "%LIBPATH%\StarCitizen\%PLYVER%\USER"*
 for %%i in ("%LIBPATH%") do set STUSRPATH=%%~si
-set STUSRDIR=dir /a:d /s /b "%STUSRPATH%\StarCitizen\%PLAYVER%\USER"*
+set STUSRDIR=dir /a:d /s /b "%STUSRPATH%\StarCitizen\%PLYVER%\USER"*
 
 set SHDDIR=dir /a:d /s /b "%APPDATA%\..\Local\Star Citizen\sc-alpha"*
 for %%i in ("%APPDATA%\..\Local\Star Citizen\sc-alpha") do set STSHDPATH=%%~si
 set STSHDDIR=dir /a:d /s /b "%STSHDPATH%"*
 
 echo 削除対象は以下です
+echo;
 
 echo ユーザーフォルダ
 %USRDIR% 2>nul

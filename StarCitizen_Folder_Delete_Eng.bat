@@ -1,7 +1,8 @@
 @echo off
 
+echo --------------------------------------------------------------------------------------------------------------
 echo Disclaimer
-echo The developer will not be liable for any damages caused by the use of this script.
+echo The author assumes no responsibility for any damages caused by the use of this script.
 echo;
 
 echo Usage Notes
@@ -13,22 +14,24 @@ echo;
 
 echo author 
 echo Luke514 Twitter:@rx_luke Discord:Shadow514#0642
+echo --------------------------------------------------------------------------------------------------------------
 echo;
 
 set LIBPATH=C:\Program Files\Roberts Space Industries
-set PLAYVER=LIVE
+set PLYVER=LIVE
 
 set COUNT=0
 
-set USRDIR=dir /a:d /s /b "%LIBPATH%\StarCitizen\%PLAYVER%\USER"*
+set USRDIR=dir /a:d /s /b "%LIBPATH%\StarCitizen\%PLYVER%\USER"*
 for %%i in ("%LIBPATH%") do set STUSRPATH=%%~si
-set STUSRDIR=dir /a:d /s /b "%STUSRPATH%\StarCitizen\%PLAYVER%\USER"*
+set STUSRDIR=dir /a:d /s /b "%STUSRPATH%\StarCitizen\%PLYVER%\USER"*
 
 set SHDDIR=dir /a:d /s /b "%APPDATA%\..\Local\Star Citizen\sc-alpha"*
 for %%i in ("%APPDATA%\..\Local\Star Citizen\sc-alpha") do set STSHDPATH=%%~si
 set STSHDDIR=dir /a:d /s /b "%STSHDPATH%"*
 
 echo Subjects for deletion include
+echo;
 
 echo User folder
 %USRDIR% 2>nul
