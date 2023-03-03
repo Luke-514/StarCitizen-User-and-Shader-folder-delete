@@ -1,6 +1,3 @@
-StarCitizen_Folder_Delete  
-User & Shader Folder Delete
-
 # これは何をするためのもの？/What is this for?
 本バッチファイルはStar Citizenのバージョンが変わった際に、  
 CIG(SCの開発・運営)が削除することを推奨している、ユーザーフォルダとシェーダーフォルダを削除するものです
