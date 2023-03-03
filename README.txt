@@ -18,7 +18,11 @@ USER & Shader Folder Delete
 ・作者/author
   Luke514 Twitter:@rx_luke Discord:Shadow514#0642
 
-・使い方
+・使い方/How to use
   1.batファイルをダウンロードします
     ※Engは英語バージョンで中身に違いはありません
   2.任意の場所で実行します
+
+  1.Download the bat file
+    ※Eng is the English version and there is no difference in content.
+  2.Run the file at any location.
