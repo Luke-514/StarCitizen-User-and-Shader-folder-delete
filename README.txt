@@ -2,16 +2,16 @@ StarCitizen_Folder_Delete
 USER & Shader Folder Delete
 
 ・免責事項/Disclaimer
-  本スクリプトの使用によって発生した、いかなる損害に対しても作者は一切の責任を負いません
+  本バッチファイルの使用によって発生した、いかなる損害に対しても作者は一切の責任を負いません
 
-  The author assumes no responsibility for any damages caused by the use of this script.
+  The author is not responsible for any damages caused by the use of this batch file.
 
 ・利用上の注意/Usage Notes
-  本スクリプトはStar Citizen Liveバージョンを対象にしていますが、シェーダーフォルダはPTUのものも同時に削除します
+  本バッチファイルはStar Citizen Liveバージョンを対象にしていますが、シェーダーフォルダはPTUのものも同時に削除します
   削除対象に表示されたフォルダは中身ごと完全削除しますので、
   表示された対象をよく確認してから削除を実施してください
 
-  This script is for the Star Citizen Live version,
+  This batch file is for the Star Citizen Live version,
   but the shader folder will delete the PTU one at the same time
   Folders displayed as targets for deletion will be completely deleted, including their contents.
 
