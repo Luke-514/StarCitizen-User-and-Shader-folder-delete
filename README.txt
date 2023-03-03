@@ -9,7 +9,7 @@ USER & Shader Folder Delete
   Star Citizen®, Roberts Space Industries® and Cloud Imperium® are registered trademarks of Cloud Imperium Rights LLC
 
 ・利用上の注意/Usage Notes
-  本バッチファイルはStar Citizen Liveバージョンを対象にしていますが、ShaderフォルダはPTUのものも同時に削除します
+  本バッチファイルはStar Citizen Liveバージョンを対象にしていますが、シェーダーフォルダはPTUのものも同時に削除します
   削除対象に表示されたフォルダは中身ごと完全削除しますので、
   表示された対象をよく確認してから削除を実施してください
 
@@ -19,7 +19,7 @@ USER & Shader Folder Delete
 
 ・これは何をするためのもの？/What is this for?
   本バッチファイルはStar Citizenのバージョンが変わった際に、
-  削除することが推奨されている、UserフォルダとShaderフォルダを削除するものです
+  削除することが推奨されている、ユーザーフォルダとシェーダーフォルダを削除するものです
 
   This batch file deletes the User and Shader folders that are recommended to be deleted 
   when the version of Star Citizen is changed.
