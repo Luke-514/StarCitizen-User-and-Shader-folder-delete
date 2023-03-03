@@ -1,5 +1,5 @@
 StarCitizen_Folder_Delete
-USER & Shader Folder Delete
+User & Shader Folder Delete
 
 ・免責事項/Disclaimer
   本バッチファイルの使用によって発生した、いかなる損害に対しても作者は一切の責任を負いません
