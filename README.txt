@@ -1,5 +1,5 @@
 # StarCitizen_Folder_Delete
-USER &amp; Shader Folder Delete 
+USER & Shader Folder Delete 
 
 ・使い方
   1.batファイルをダウンロードします
