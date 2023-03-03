@@ -2,11 +2,11 @@
 
 echo --------------------------------------------------------------------------------------------------------------
 echo Disclaimer
-echo The author assumes no responsibility for any damages caused by the use of this script.
+echo The author is not responsible for any damages caused by the use of this batch file.
 echo;
 
 echo Usage Notes
-echo This script is for the Star Citizen Live version,
+echo This batch file is for the Star Citizen Live version,
 echo but the shader folder will delete the PTU one at the same time
 echo Folders displayed as targets for deletion will be completely deleted, including their contents.
 echo;
@@ -57,14 +57,14 @@ if %COUNT% equ 3 (
 
 set /P CHK="Are you sure you want to perform the deletion? (y/n)"
 
-if /i {%CHK%}=={y} (goto :continue)
-if /i {%CHK%}=={yes} (goto :continue)
+if /i %CHK%==y (goto CONTINUE)
+if /i %CHK%==yes (goto CONTINUE)
 
 echo Deletion process is aborted.
 pause
 exit
 
-:continue
+:CONTINUE
 
 if %COUNT% neq 1 (
   for /f %%i in ('%STUSRDIR%') do rmdir /s /q %%i

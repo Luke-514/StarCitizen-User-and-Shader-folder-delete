@@ -2,11 +2,11 @@
 
 echo --------------------------------------------------------------------------------------------------------------
 echo 免責事項
-echo 本スクリプトの使用によって発生した、いかなる損害に対しても作者は一切の責任を負いません
+echo 本バッチファイルの使用によって発生した、いかなる損害に対しても作者は一切の責任を負いません
 echo;
 
 echo 利用上の注意
-echo 本スクリプトはStar Citizen Liveバージョンを対象にしていますが、シェーダーフォルダはPTUのものも同時に削除します
+echo 本バッチファイルはStar Citizen Liveバージョンを対象にしていますが、シェーダーフォルダはPTUのものも同時に削除します
 echo 削除対象に表示されたフォルダは中身ごと完全削除しますので、
 echo 表示された対象をよく確認してから削除を実施してください
 echo;
@@ -57,14 +57,14 @@ if %COUNT% equ 3 (
 
 set /P CHK="削除を実行してもよろしいですか？ (y/n)"
 
-if /i {%CHK%}=={y} (goto :continue)
-if /i {%CHK%}=={yes} (goto :continue)
+if /i %CHK%==y (goto CONTINUE)
+if /i %CHK%==yes (goto CONTINUE)
 
 echo 削除処理を中止します
 pause
 exit
 
-:continue
+:CONTINUE
 
 if %COUNT% neq 1 (
   for /f %%i in ('%STUSRDIR%') do rmdir /s /q %%i
