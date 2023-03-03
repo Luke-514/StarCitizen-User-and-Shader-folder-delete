@@ -13,9 +13,9 @@ User & Shader Folder Delete
   削除対象に表示されたフォルダは中身ごと完全削除しますので、  
   表示された対象をよく確認してから削除を実施してください  
   
-  This batch file is for the Star Citizen Live version,  
-  but the shader folder will delete the PTU one at the same time  
-  Folders displayed as targets for deletion will be completely deleted, including their contents.  
+  This batch file targets the Star Citizen Live version, but will delete shader folders from PTU at the same time.  
+  The folders listed for deletion will be completely deleted, including their contents.  
+  Please check the target folder carefully before deleting it.  
   
 # 使い方/How to use
   1.バッチファイルをダウンロードします  
