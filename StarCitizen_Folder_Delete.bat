@@ -6,7 +6,10 @@ echo –{ƒoƒbƒ`ƒtƒ@ƒCƒ‹‚ÌŽg—p‚É‚æ‚Á‚Ä”­¶‚µ‚½A‚¢‚©‚È‚é‘¹ŠQ‚É‘Î‚µ‚Ä‚àìŽÒ‚ÍˆêØ‚Ì
 echo;
 
 echo —˜—pã‚Ì’ˆÓ
-echo –{ƒoƒbƒ`ƒtƒ@ƒCƒ‹‚ÍStar Citizen Liveƒo[ƒWƒ‡ƒ“‚ð‘ÎÛ‚É‚µ‚Ä‚¢‚Ü‚·‚ªAƒVƒF[ƒ_[ƒtƒHƒ‹ƒ_‚ÍPTU‚Ì‚à‚Ì‚à“¯Žž‚Éíœ‚µ‚Ü‚·
+echo –{ƒoƒbƒ`ƒtƒ@ƒCƒ‹‚ÍŽå‚ÉLiveƒo[ƒWƒ‡ƒ“‚Å“®ì‚µ‚Ü‚·‚ªA
+echo %AppData%/../Local/Star Citizen‰º‚Ì
+echo ƒVƒF[ƒ_[ƒtƒHƒ‹ƒ_‚ðíœ‚·‚é‚½‚ßAPTUƒo[ƒWƒ‡ƒ“‚É‚à‰e‹¿‚µ‚Ü‚·
+echo;
 echo íœ‘ÎÛ‚É•\Ž¦‚³‚ê‚½ƒtƒHƒ‹ƒ_‚Í’†g‚²‚ÆŠ®‘Síœ‚µ‚Ü‚·‚Ì‚ÅA
 echo •\Ž¦‚³‚ê‚½‘ÎÛ‚ð‚æ‚­Šm”F‚µ‚Ä‚©‚çíœ‚ðŽÀŽ{‚µ‚Ä‚­‚¾‚³‚¢
 echo;

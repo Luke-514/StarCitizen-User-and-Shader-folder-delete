@@ -2,16 +2,19 @@
 
 echo --------------------------------------------------------------------------------------------------------------
 echo Disclaimer
-echo The author is not responsible for any damages caused by the use of this batch file.
+echo Use this batch file at your own risk.
 echo;
 
 echo Usage Notes
-echo This batch file is for the Star Citizen Live version,
-echo but the shader folder will delete the PTU one at the same time
-echo Folders displayed as targets for deletion will be completely deleted, including their contents.
+echo This batch file mainly works for Live version,
+echo but also affects PTU version as it deletes shader folders under 
+echo %AppData%/../Local/Star Citizen
+echo;
+echo The folder will be completely deleted.
+echo Please check targeted folder names carefully before running the batch.
 echo;
 
-echo author 
+echo creator 
 echo Luke514 Twitter:@rx_luke Discord:Shadow514#0642
 echo --------------------------------------------------------------------------------------------------------------
 echo;
