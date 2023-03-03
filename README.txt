@@ -17,6 +17,13 @@ USER & Shader Folder Delete
   but the shader folder will delete the PTU one at the same time
   Folders displayed as targets for deletion will be completely deleted, including their contents.
 
+・これは何をするためのもの？/What is this for?
+  本バッチファイルはStar Citizenのバージョンが変わった際に、
+  削除することが推奨されている、UserフォルダとShaderフォルダを削除するものです
+
+  This batch file deletes the User and Shader folders that are recommended to be deleted 
+  when the version of Star Citizen is changed.
+
 ・使い方/How to use
   1.バッチファイルをダウンロードします
     ※Engは英語バージョンで中身に違いはありません
