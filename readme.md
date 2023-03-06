@@ -2,7 +2,7 @@
 本バッチファイルはStar Citizenのバージョンが変わった際に、  
 CIG(SCの開発・運営)が削除することを推奨している、ユーザーフォルダとシェーダーフォルダを削除するものです
 
-This patch deletes both USER Folder and shader Folders which CIG recommends deleting upon SC update
+This batch file deletes both USER Folder and shader Folders which CIG recommends deleting upon SC update
 
 # 利用上の注意/Usage Notes
 本バッチファイルは主にLiveバージョンで動作しますが、  
