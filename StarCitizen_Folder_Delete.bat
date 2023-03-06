@@ -6,9 +6,10 @@ echo –{ƒoƒbƒ`ƒtƒ@ƒCƒ‹‚ÌŽg—p‚É‚æ‚Á‚Ä”­¶‚µ‚½A‚¢‚©‚È‚é‘¹ŠQ‚É‘Î‚µ‚Ä‚àìŽÒ‚ÍˆêØ‚Ì
 echo;
 
 echo —˜—pã‚Ì’ˆÓ
-echo –{ƒoƒbƒ`ƒtƒ@ƒCƒ‹‚ÍŽå‚ÉLiveƒo[ƒWƒ‡ƒ“‚Å“®ì‚µ‚Ü‚·‚ªA
-echo %AppData%/../Local/Star Citizen‰º‚Ì
-echo ƒVƒF[ƒ_[ƒtƒHƒ‹ƒ_‚ðíœ‚·‚é‚½‚ßAPTUƒo[ƒWƒ‡ƒ“‚É‚à‰e‹¿‚µ‚Ü‚·
+echo –{ƒoƒbƒ`ƒtƒ@ƒCƒ‹‚ÍLIVE/PTU‚Ç‚¿‚ç‚É‚à‘Î‰ž‚µ‚Ä‚¢‚Ü‚·‚ªA
+echo PTU‚ªLIVE‚Ìƒ}ƒCƒi[ƒpƒbƒ`‚ðƒeƒXƒg‚µ‚Ä‚¢‚éê‡‚ÍA‚Ç‚¿‚ç‚ÌƒVƒF[ƒ_[ƒtƒHƒ‹ƒ_‚àíœ‚³‚ê‚Ü‚·B
+echo ƒ}ƒCƒi[ƒpƒbƒ`‚Ì—á) LIVE: 3.17.4 PTU: 3.17.5
+echo ƒƒWƒƒ[ƒpƒbƒ`‚Ì—á) LIVE: 3.17.5 PTU: 3.18.0
 echo;
 echo íœ‘ÎÛ‚É•\Ž¦‚³‚ê‚½ƒtƒHƒ‹ƒ_‚Í’†g‚²‚ÆŠ®‘Síœ‚µ‚Ü‚·‚Ì‚ÅA
 echo •\Ž¦‚³‚ê‚½‘ÎÛ‚ð‚æ‚­Šm”F‚µ‚Ä‚©‚çíœ‚ðŽÀŽ{‚µ‚Ä‚­‚¾‚³‚¢
@@ -19,7 +20,22 @@ echo Luke514 Twitter:@rx_luke Discord:Shadow514#0642
 echo --------------------------------------------------------------------------------------------------------------
 echo;
 
-set PLYVER=LIVE
+set /P CHK="LIVE‚©PTUA‚Ç‚¿‚ç‚ÌƒtƒHƒ‹ƒ_‚ðíœ‚µ‚Ü‚·‚©H (live/ptu)"
+
+if /i %CHK%==live (
+  set PLYVER=LIVE
+) else if /i %CHK%==l (
+  set PLYVER=LIVE
+) else if /i %CHK%==ptu (
+  set PLYVER=PTU
+) else if /i %CHK%==p (
+  set PLYVER=PTU
+) else (
+  echo —\Šú‚µ‚È‚¢•¶Žš‚ª“ü—Í‚³‚ê‚Ü‚µ‚½
+  echo íœˆ—‚ð’†Ž~‚µ‚Ü‚·
+  pause
+  EXIT
+)
 
 set COUNT=0
 
@@ -29,8 +45,9 @@ set USRDIR=dir /a:d /s /b "%LIBPATH%\StarCitizen\%PLYVER%\USER"*
 for %%i in ("%LIBPATH%") do set STUSRPATH=%%~si
 set STUSRDIR=dir /a:d /s /b "%STUSRPATH%\StarCitizen\%PLYVER%\USER"*
 
-set SHDDIR=dir /a:d /s /b "%APPDATA%\..\Local\Star Citizen\sc-alpha"*
-for %%i in ("%APPDATA%\..\Local\Star Citizen\sc-alpha") do set STSHDPATH=%%~si
+for /f "tokens=3" %%i in ('findstr "Branch:" "%LIBPATH%\StarCitizen\%PLYVER%\Game.log"') do set BRANCH=%%i
+set SHDDIR=dir /a:d /s /b "%APPDATA%\..\Local\Star Citizen\%BRANCH%"*
+for %%i in ("%APPDATA%\..\Local\Star Citizen\%BRANCH%") do set STSHDPATH=%%~si
 set STSHDDIR=dir /a:d /s /b "%STSHDPATH%"*
 
 echo íœ‘ÎÛ‚ÍˆÈ‰º‚Å‚·

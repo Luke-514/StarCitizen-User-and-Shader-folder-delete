@@ -6,9 +6,10 @@ echo Use this batch file at your own risk.
 echo;
 
 echo Usage Notes
-echo This batch file mainly works for Live version,
-echo but also affects PTU version as it deletes shader folders under 
-echo %AppData%/../Local/Star Citizen
+echo Although this batch file is compatible with both LIVE/PTU
+echo If PTU is testing a LIVE minor patch, both shader folders will be deleted.
+echo Example of a minor patch) LIVE: 3.17.4 PTU: 3.17.5
+echo Example of a major patch) LIVE: 3.17.5 PTU: 3.18.0
 echo;
 echo The folder will be completely deleted.
 echo Please check targeted folder names carefully before running the batch.
@@ -19,7 +20,22 @@ echo Luke514 Twitter:@rx_luke Discord:Shadow514#0642
 echo --------------------------------------------------------------------------------------------------------------
 echo;
 
-set PLYVER=LIVE
+set /P CHK="Which folder do you want to delete, LIVE or PTU? (live/ptu)"
+
+if /i %CHK%==live (
+  set PLYVER=LIVE
+) else if /i %CHK%==l (
+  set PLYVER=LIVE
+) else if /i %CHK%==ptu (
+  set PLYVER=PTU
+) else if /i %CHK%==p (
+  set PLYVER=PTU
+) else (
+  echo An unexpected character was entered.
+  echo Deletion process is aborted.
+  pause
+  EXIT
+)
 
 set COUNT=0
 
@@ -29,8 +45,9 @@ set USRDIR=dir /a:d /s /b "%LIBPATH%\StarCitizen\%PLYVER%\USER"*
 for %%i in ("%LIBPATH%") do set STUSRPATH=%%~si
 set STUSRDIR=dir /a:d /s /b "%STUSRPATH%\StarCitizen\%PLYVER%\USER"*
 
-set SHDDIR=dir /a:d /s /b "%APPDATA%\..\Local\Star Citizen\sc-alpha"*
-for %%i in ("%APPDATA%\..\Local\Star Citizen\sc-alpha") do set STSHDPATH=%%~si
+for /f "tokens=3" %%i in ('findstr "Branch:" "%LIBPATH%\StarCitizen\%PLYVER%\Game.log"') do set BRANCH=%%i
+set SHDDIR=dir /a:d /s /b "%APPDATA%\..\Local\Star Citizen\%BRANCH%"*
+for %%i in ("%APPDATA%\..\Local\Star Citizen\%BRANCH%") do set STSHDPATH=%%~si
 set STSHDDIR=dir /a:d /s /b "%STSHDPATH%"*
 
 echo Subjects for deletion include
