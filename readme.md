@@ -5,8 +5,8 @@ CIG(SCの開発・運営)が削除することを推奨している、ユーザ�
 This batch file deletes both USER Folder and shader Folders which CIG recommends deleting upon SC update
 
 # 利用上の注意/Usage Notes
-本バッチファイルはLIVE/PTUどちらにも対応していますが、  
-PTUがLIVEのマイナーパッチをテストしている場合は、どちらのシェーダーフォルダも削除されます。  
+本バッチファイルはLIVE/PTUの両方に対応していますが、  
+PTUがLIVEのマイナーパッチをテストしている場合は、両方のシェーダーフォルダが削除されます  
 マイナーパッチの例) LIVE: 3.17.4 PTU: 3.17.5  
 メジャーパッチの例) LIVE: 3.17.5 PTU: 3.18.0  
   
