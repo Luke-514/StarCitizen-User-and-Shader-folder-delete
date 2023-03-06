@@ -6,8 +6,8 @@ echo –{ƒoƒbƒ`ƒtƒ@ƒCƒ‹‚ÌŽg—p‚É‚æ‚Á‚Ä”­¶‚µ‚½A‚¢‚©‚È‚é‘¹ŠQ‚É‘Î‚µ‚Ä‚àìŽÒ‚ÍˆêØ‚Ì
 echo;
 
 echo —˜—pã‚Ì’ˆÓ
-echo –{ƒoƒbƒ`ƒtƒ@ƒCƒ‹‚ÍLIVE/PTU‚Ç‚¿‚ç‚É‚à‘Î‰ž‚µ‚Ä‚¢‚Ü‚·‚ªA
-echo PTU‚ªLIVE‚Ìƒ}ƒCƒi[ƒpƒbƒ`‚ðƒeƒXƒg‚µ‚Ä‚¢‚éê‡‚ÍA‚Ç‚¿‚ç‚ÌƒVƒF[ƒ_[ƒtƒHƒ‹ƒ_‚àíœ‚³‚ê‚Ü‚·B
+echo –{ƒoƒbƒ`ƒtƒ@ƒCƒ‹‚ÍLIVE/PTU‚Ì—¼•û‚É‘Î‰ž‚µ‚Ä‚¢‚Ü‚·‚ªA
+echo PTU‚ªLIVE‚Ìƒ}ƒCƒi[ƒpƒbƒ`‚ðƒeƒXƒg‚µ‚Ä‚¢‚éê‡‚ÍA—¼•û‚ÌƒVƒF[ƒ_[ƒtƒHƒ‹ƒ_‚ªíœ‚³‚ê‚Ü‚·B
 echo ƒ}ƒCƒi[ƒpƒbƒ`‚Ì—á) LIVE: 3.17.4 PTU: 3.17.5
 echo ƒƒWƒƒ[ƒpƒbƒ`‚Ì—á) LIVE: 3.17.5 PTU: 3.18.0
 echo;
