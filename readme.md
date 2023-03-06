@@ -24,10 +24,12 @@ Please check targeted folder names carefully before running the batch.
 # 使い方/How to use
 1.&nbsp;バッチファイルをダウンロードします  
 &emsp;(Engは英語バージョンで言語以外に違いはありません)  
+&emsp;(oldは以前のバージョンです　現行バージョンで問題が発生した際にご利用ください)  
 2.&nbsp;任意の場所で実行します  
   
 1.&nbsp;Download the batch file.  
 &emsp;(the Eng version is no different from the Jpn version except for the language)  
+&emsp;(old is the previous version Please use it if you encounter problems with the current version)  
 2.&nbsp;Run the file at any location.  
 
 # 免責事項/Disclaimer
