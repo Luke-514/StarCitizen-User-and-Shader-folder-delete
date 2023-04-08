@@ -46,8 +46,8 @@ for %%i in ("%LIBPATH%") do set STUSRPATH=%%~si
 set STUSRDIR=dir /a:d /s /b "%STUSRPATH%\StarCitizen\%PLYVER%\USER"*
 
 for /f "tokens=3" %%i in ('findstr "Branch:" "%LIBPATH%\StarCitizen\%PLYVER%\Game.log"') do set BRANCH=%%i
-set SHDDIR=dir /a:d /s /b "%APPDATA%\..\Local\Star Citizen\%BRANCH%"*
-for %%i in ("%APPDATA%\..\Local\Star Citizen\%BRANCH%") do set STSHDPATH=%%~si
+set SHDDIR=dir /a:d /s /b "%LOCALAPPDATA%\Star Citizen\%BRANCH%"*
+for %%i in ("%LOCALAPPDATA%\Star Citizen\%BRANCH%") do set STSHDPATH=%%~si
 set STSHDDIR=dir /a:d /s /b "%STSHDPATH%"*
 
 echo çÌèúëŒè€ÇÕà»â∫Ç≈Ç∑
