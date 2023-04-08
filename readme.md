@@ -41,4 +41,4 @@ Star Citizen®, Roberts Space Industries® and Cloud Imperium® are registered t
 
 # 作者/Creator
 Luke514 Twitter:@rx_luke Discord:Shadow514#0642
-Star Citizen招待コード(referral code) → STAR-9YPT-ZV5J
+&emsp;Star Citizen招待コード(referral code) → STAR-9YPT-ZV5J
