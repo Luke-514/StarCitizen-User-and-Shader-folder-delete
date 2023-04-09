@@ -48,5 +48,7 @@ Use this batch file at your own risk.
 Star Citizen®, Roberts Space Industries® and Cloud Imperium® are registered trademarks of Cloud Imperium Rights LLC.  
 
 # 作者/Creator
-Luke514 Twitter:@rx_luke Discord:Shadow514#0642  
+Luke514  
+Twitter:@rx_luke  
+Discord:Shadow514#0642  
 Star Citizen招待コード(referral code) → STAR-9YPT-ZV5J
