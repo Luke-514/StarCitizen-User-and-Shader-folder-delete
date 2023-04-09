@@ -14,6 +14,8 @@ echo;
 echo The folder will be completely deleted.
 echo Please check targeted folder names carefully before running the batch.
 echo;
+echo Please back up your settings if you need to, as they will be erased.
+echo;
 
 echo creator 
 echo Luke514 Twitter:@rx_luke Discord:Shadow514#0642
@@ -75,10 +77,10 @@ if %COUNT% equ 3 (
   EXIT
 )
 
-set /P CHK="Are you sure you want to perform the deletion? (y/n)"
+set /P CHK="Are you sure you want to perform the deletion? (yes/no)"
 
-if /i %CHK%==y (goto CONTINUE)
 if /i %CHK%==yes (goto CONTINUE)
+if /i %CHK%==y (goto CONTINUE)
 
 echo Deletion process is aborted.
 pause

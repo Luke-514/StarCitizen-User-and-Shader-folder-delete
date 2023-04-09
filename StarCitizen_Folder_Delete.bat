@@ -14,6 +14,8 @@ echo;
 echo 削除対象に表示されたフォルダは中身ごと完全削除しますので、
 echo 表示された対象をよく確認してから削除を実施してください
 echo;
+echo 操作設定等は消去されますので、必要な方はバックアップしてください
+echo;
 
 echo 作者 
 echo Luke514 Twitter:@rx_luke Discord:Shadow514#0642
@@ -75,10 +77,10 @@ if %COUNT% equ 3 (
   EXIT
 )
 
-set /P CHK="削除を実行してもよろしいですか？ (y/n)"
+set /P CHK="削除を実行してもよろしいですか？ (yes/no)"
 
-if /i %CHK%==y (goto CONTINUE)
 if /i %CHK%==yes (goto CONTINUE)
+if /i %CHK%==y (goto CONTINUE)
 
 echo 削除処理を中止します
 pause
