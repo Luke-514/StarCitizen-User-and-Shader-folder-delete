@@ -30,7 +30,7 @@ Please back up your settings if you need to, as they will be erased.
 &emsp;(Engは英語バージョンで言語以外に違いはありません)  
 &emsp;(oldは以前のバージョンです　現行バージョンで問題が発生した際にご利用ください)  
 2.&nbsp;任意の場所で実行します  
-3.&nbsp;LIVEかPTU、どちらか消したいバージョンを入力します(l、pでも可)
+3.&nbsp;LIVEかPTU、どちらか消したいバージョンを入力します(l、pでも可)  
 4.&nbsp;削除対象が表示されるので、YESかNOを入力してください(y、nでも可)  
   
 1.&nbsp;Download the batch file.  
