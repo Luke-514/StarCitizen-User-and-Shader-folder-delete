@@ -3,24 +3,24 @@
 echo --------------------------------------------------------------------------------------------------------------
 echo Disclaimer
 echo Use this batch file at your own risk.
-echo.
+echo;
 
 echo Usage Notes
 echo Although this batch file is compatible with both LIVE/PTU
 echo If PTU is testing a LIVE minor patch, both shader folders will be deleted.
 echo Example of a minor patch) LIVE: 3.17.4 PTU: 3.17.5
 echo Example of a major patch) LIVE: 3.17.5 PTU: 3.18.0
-echo.
+echo;
 echo The folder will be completely deleted.
 echo Please check targeted folder names carefully before running the batch.
-echo.
+echo;
 echo Please back up your settings if you need to, as they will be erased.
-echo.
+echo;
 
 echo creator 
 echo Luke514 Twitter:@rx_luke Discord:Shadow514#0642
 echo --------------------------------------------------------------------------------------------------------------
-echo.
+echo;
 
 set /P CHK="Which folder do you want to delete, LIVE or PTU? (live/ptu)"
 
@@ -53,7 +53,7 @@ for %%i in ("%LOCALAPPDATA%\Star Citizen\%BRANCH%") do set STSHDPATH=%%~si
 set STSHDDIR=dir /a:d /s /b "%STSHDPATH%"*
 
 echo Subjects for deletion include
-echo.
+echo;
 
 echo User folder
 %USRDIR% 2>nul
@@ -61,7 +61,7 @@ if %errorlevel% neq 0 (
   echo User folder is missing
   set /a COUNT=%COUNT%+1
 )
-echo.
+echo;
 
 echo Shader folder
 %SHDDIR% 2>nul
@@ -69,7 +69,7 @@ if %errorlevel% neq 0 (
   echo Shader folder is missing
   set /a COUNT=%COUNT%+2
 )
-echo.
+echo;
 
 if %COUNT% equ 3 (
   echo The folder to be deleted does not exist, so the process is terminated.

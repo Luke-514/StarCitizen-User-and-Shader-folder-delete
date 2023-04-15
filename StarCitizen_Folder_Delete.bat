@@ -3,24 +3,24 @@
 echo --------------------------------------------------------------------------------------------------------------
 echo 免責事項
 echo 本バッチファイルの使用によって発生した、いかなる損害に対しても作者は一切の責任を負いません
-echo;
+echo.
 
 echo 利用上の注意
 echo 本バッチファイルはLIVE/PTUの両方に対応していますが、
 echo PTUがLIVEのマイナーパッチをテストしている場合は、両方のシェーダーフォルダが削除されます。
 echo マイナーパッチの例) LIVE: 3.17.4 PTU: 3.17.5
 echo メジャーパッチの例) LIVE: 3.17.5 PTU: 3.18.0
-echo;
+echo.
 echo 削除対象に表示されたフォルダは中身ごと完全削除しますので、
 echo 表示された対象をよく確認してから削除を実施してください
-echo;
+echo.
 echo 操作設定等は消去されますので、必要な方はバックアップしてください
-echo;
+echo.
 
 echo 作者 
 echo Luke514 Twitter:@rx_luke Discord:Shadow514#0642
 echo --------------------------------------------------------------------------------------------------------------
-echo;
+echo.
 
 set /P CHK="LIVEかPTU、どちらのフォルダを削除しますか？ (live/ptu)"
 
@@ -53,7 +53,7 @@ for %%i in ("%LOCALAPPDATA%\Star Citizen\%BRANCH%") do set STSHDPATH=%%~si
 set STSHDDIR=dir /a:d /s /b "%STSHDPATH%"*
 
 echo 削除対象は以下です
-echo;
+echo.
 
 echo ユーザーフォルダ
 %USRDIR% 2>nul
@@ -61,7 +61,7 @@ if %errorlevel% neq 0 (
   echo ユーザーフォルダがありません
   set /a COUNT=%COUNT%+1
 )
-echo;
+echo.
 
 echo シェーダーフォルダ
 %SHDDIR% 2>nul
@@ -69,7 +69,7 @@ if %errorlevel% neq 0 (
   echo シェーダーフォルダがありません
   set /a COUNT=%COUNT%+2
 )
-echo;
+echo.
 
 if %COUNT% equ 3 (
   echo 削除対象のフォルダが存在しないため、処理を終了します
