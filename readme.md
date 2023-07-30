@@ -14,6 +14,7 @@ PTUがLIVEのマイナーパッチをテストしている場合は、両方の�
 表示された対象をよく確認してから削除を実施してください  
   
 操作設定等は消去されますので、必要な方はバックアップしてください  
+https://support.robertsspaceindustries.com/hc/en-us/articles/360000183328-Create-export-and-import-custom-profiles  
   
 Although this batch file is compatible with both LIVE/PTU  
 If PTU is testing a LIVE minor patch, both shader folders will be deleted.  
@@ -24,6 +25,7 @@ The folder will be completely deleted.
 Please check targeted folder names carefully before running the batch.  
   
 Please back up your settings if you need to, as they will be erased.  
+https://support.robertsspaceindustries.com/hc/en-us/articles/360000183328-Create-export-and-import-custom-profiles  
   
 # 使い方/How to use
 1.&nbsp;バッチファイルをダウンロードします  
