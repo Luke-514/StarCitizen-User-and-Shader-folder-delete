@@ -1,28 +1,28 @@
 @echo off
 
 echo --------------------------------------------------------------------------------------------------------------
-echo 免責事項
-echo 本バッチファイルの使用によって発生した、いかなる損害に対しても作者は一切の責任を負いません
+echo Disclaimer
+echo Use this batch file at your own risk.
 echo.
 
-echo 利用上の注意
-echo 本バッチファイルはLIVE/PTUの両方に対応していますが、
-echo PTUがLIVEのマイナーパッチをテストしている場合は、両方のシェーダーフォルダが削除されます。
-echo マイナーパッチの例) LIVE: 3.17.4 PTU: 3.17.5
-echo メジャーパッチの例) LIVE: 3.17.5 PTU: 3.18.0
+echo Usage Notes
+echo Although this batch file is compatible with both LIVE/PTU
+echo If PTU is testing a LIVE minor patch, both shader folders will be deleted.
+echo Example of a minor patch) LIVE: 3.17.4 PTU: 3.17.5
+echo Example of a major patch) LIVE: 3.17.5 PTU: 3.18.0
 echo.
-echo 削除対象に表示されたフォルダは中身ごと完全削除しますので、
-echo 表示された対象をよく確認してから削除を実施してください
+echo The folder will be completely deleted.
+echo Please check targeted folder names carefully before running the batch.
 echo.
-echo 操作設定等は消去されますので、必要な方はバックアップしてください
+echo Please back up your settings if you need to, as they will be erased.
 echo.
 
-echo 作者 
-echo Luke514 Twitter:@rx_luke
+echo creator 
+echo Luke514 Twitter:@rx_luke Discord:Shadow514#0642
 echo --------------------------------------------------------------------------------------------------------------
 echo.
 
-set /P CHK="LIVEかPTU、どちらのフォルダを削除しますか？ (live/ptu)"
+set /P CHK="Which folder do you want to delete, LIVE or PTU? (live/ptu)"
 
 if /i %CHK%==live (
   set PLYVER=LIVE
@@ -33,15 +33,15 @@ if /i %CHK%==live (
 ) else if /i %CHK%==p (
   set PLYVER=PTU
 ) else (
-  echo 予期しない文字が入力されました
-  echo 削除処理を中止します
+  echo An unexpected character was entered.
+  echo Deletion process is aborted.
   pause
   EXIT
 )
 
 set COUNT=0
 
-for /f "tokens=*" %%i in ('findstr /v "{ ( ) js: Error libraryFolder ." %APPDATA%\rsilauncher\logs\log.log ^| findstr "\\"') do set LIBPATH=%%~i
+for /f "tokens=*" %%i in ('findstr /v "{ ( ) js: Error libraryFolder ." %APPDATA%\rsilauncher\log.log ^| findstr "\\"') do set LIBPATH=%%~i
 set LIBPATH=%LIBPATH:\\=\%
 set USRDIR=dir /a:d /s /b "%LIBPATH%\StarCitizen\%PLYVER%\USER"*
 for %%i in ("%LIBPATH%") do set STUSRPATH=%%~si
@@ -52,37 +52,37 @@ set SHDDIR=dir /a:d /s /b "%LOCALAPPDATA%\Star Citizen\%BRANCH%"*
 for %%i in ("%LOCALAPPDATA%\Star Citizen\%BRANCH%") do set STSHDPATH=%%~si
 set STSHDDIR=dir /a:d /s /b "%STSHDPATH%"*
 
-echo 削除対象は以下です
+echo Subjects for deletion include
 echo.
 
-echo ユーザーフォルダ
+echo User folder
 %USRDIR% 2>nul
 if %errorlevel% neq 0 (
-  echo ユーザーフォルダがありません
+  echo User folder is missing
   set /a COUNT=%COUNT%+1
 )
 echo.
 
-echo シェーダーフォルダ
+echo Shader folder
 %SHDDIR% 2>nul
 if %errorlevel% neq 0 (
-  echo シェーダーフォルダがありません
+  echo Shader folder is missing
   set /a COUNT=%COUNT%+2
 )
 echo.
 
 if %COUNT% equ 3 (
-  echo 削除対象のフォルダが存在しないため、処理を終了します
+  echo The folder to be deleted does not exist, so the process is terminated.
   pause
   EXIT
 )
 
-set /P CHK="削除を実行してもよろしいですか？ (yes/no)"
+set /P CHK="Are you sure you want to perform the deletion? (yes/no)"
 
 if /i %CHK%==yes (goto CONTINUE)
 if /i %CHK%==y (goto CONTINUE)
 
-echo 削除処理を中止します
+echo Deletion process is aborted.
 pause
 exit
 
@@ -90,12 +90,12 @@ exit
 
 if %COUNT% neq 1 (
   for /f %%i in ('%STUSRDIR%') do rmdir /s /q %%i
-  if %errorlevel% lss 2 echo ユーザーフォルダを削除しました
+  if %errorlevel% lss 2 echo Deleted user folder
 )
 
 if %COUNT% neq 2 (
   for /f %%i in ('%STSHDDIR%') do rmdir /s /q %%i
-  if %errorlevel% equ 0 echo シェーダーフォルダを削除しました
+  if %errorlevel% equ 0 echo Deleted shader folder
 )
 
 pause

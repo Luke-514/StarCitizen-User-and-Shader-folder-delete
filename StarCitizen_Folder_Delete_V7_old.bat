@@ -18,7 +18,7 @@ echo 操作設定等は消去されますので、必要な方はバックアップしてください
 echo.
 
 echo 作者 
-echo Luke514 Twitter:@rx_luke
+echo Luke514 Twitter:@rx_luke Discord:Shadow514#0642
 echo --------------------------------------------------------------------------------------------------------------
 echo.
 
@@ -41,7 +41,7 @@ if /i %CHK%==live (
 
 set COUNT=0
 
-for /f "tokens=*" %%i in ('findstr /v "{ ( ) js: Error libraryFolder ." %APPDATA%\rsilauncher\logs\log.log ^| findstr "\\"') do set LIBPATH=%%~i
+for /f "tokens=*" %%i in ('findstr /v "{ ( ) js: Error libraryFolder ." %APPDATA%\rsilauncher\log.log ^| findstr "\\"') do set LIBPATH=%%~i
 set LIBPATH=%LIBPATH:\\=\%
 set USRDIR=dir /a:d /s /b "%LIBPATH%\StarCitizen\%PLYVER%\USER"*
 for %%i in ("%LIBPATH%") do set STUSRPATH=%%~si
