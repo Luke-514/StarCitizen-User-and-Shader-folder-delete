@@ -41,7 +41,9 @@ if /i %CHK%==live (
 
 set COUNT=0
 
-for /f "tokens=*" %%i in ('findstr /v "{ ( ) js: Error libraryFolder ." %APPDATA%\rsilauncher\logs\log.log ^| findstr "\\"') do set LIBPATH=%%~i
+for /f "tokens=*" %%i in ('findstr "libraryFolder" %APPDATA%\rsilauncher\logs\log.log') do SET LIBPATH=%%~i
+SET LIBPATH=%LIBPATH:libraryFolder": "=%
+SET LIBPATH=%LIBPATH:",=%
 set LIBPATH=%LIBPATH:\\=\%
 set USRDIR=dir /a:d /s /b "%LIBPATH%\StarCitizen\%PLYVER%\USER"*
 for %%i in ("%LIBPATH%") do set STUSRPATH=%%~si
