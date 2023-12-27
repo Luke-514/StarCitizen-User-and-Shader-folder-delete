@@ -30,6 +30,7 @@ https://github.com/Luke-514/StarCitizen_Setting_backup_and_restore
 # 使い方/How to use
 1.&nbsp;バッチファイルをダウンロードします  
 &emsp;(Engは英語バージョンで言語以外に違いはありません)  
+&emsp;(文字化けする方はUTF8をお使いください)  
 2.&nbsp;任意の場所で実行します  
 3.&nbsp;LIVEかPTU、どちらか消したいバージョンを入力します(l、pでも可)  
 4.&nbsp;削除対象が表示されるので、YESかNOを入力してください(y、nでも可)  
