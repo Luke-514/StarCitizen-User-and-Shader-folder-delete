@@ -5,7 +5,7 @@ CIG(SCの開発・運営)が削除することを推奨している、ユーザ�
 This batch file deletes both USER Folder and shader Folders which CIG recommends deleting upon SC update
 
 # 利用上の注意/Usage Notes
-アップデート前に使うことをお勧めします  
+本ツールはStar Citizenのアップデート前に使うことをお勧めします  
   
 本バッチファイルはLIVE/PTUの両方に対応していますが、  
 PTUがLIVEのマイナーパッチをテストしている場合は、両方のシェーダーフォルダが削除されます  
@@ -18,7 +18,7 @@ PTUがLIVEのマイナーパッチをテストしている場合は、両方の�
 操作設定等は消去されますので、必要な方はバックアップしてください  
 https://github.com/Luke-514/StarCitizen_Setting_backup_and_restore  
   
-I recommend using it before the update.  
+This tool is recommended to be used before updating Star Citizen  
   
 Although this batch file is compatible with both LIVE/PTU  
 If PTU is testing a LIVE minor patch, both shader folders will be deleted.  
