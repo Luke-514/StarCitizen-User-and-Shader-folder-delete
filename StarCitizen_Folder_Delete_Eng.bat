@@ -22,19 +22,25 @@ echo Luke514 Twitter:@rx_luke
 echo --------------------------------------------------------------------------------------------------------------
 echo.
 
-set /P CHK="Which folder do you want to delete, LIVE or PTU? (live/ptu)"
+set /P CHK="Which folder do you want to delete: LIVE, PTU or EPTU? (live/ptu/eptu)"
 
 if /i %CHK%==live (
-  set PLYVER=LIVE
+  SET PLYVER=LIVE
 ) else if /i %CHK%==l (
-  set PLYVER=LIVE
+  SET PLYVER=LIVE
 ) else if /i %CHK%==ptu (
-  set PLYVER=PTU
+  SET PLYVER=PTU
 ) else if /i %CHK%==p (
-  set PLYVER=PTU
+  SET PLYVER=PTU
+) else if /i %CHK%==eptu (
+  SET PLYVER=EPTU
+) else if /i %CHK%==ep (
+  SET PLYVER=EPTU
 ) else (
+  echo.
   echo An unexpected character was entered.
   echo Deletion process is aborted.
+  echo.
   pause
   EXIT
 )

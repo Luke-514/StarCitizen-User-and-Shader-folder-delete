@@ -22,19 +22,25 @@ echo Luke514 Twitter:@rx_luke
 echo --------------------------------------------------------------------------------------------------------------
 echo.
 
-set /P CHK="LIVEかPTU、どちらのフォルダを削除しますか？ (live/ptu)"
+set /P CHK="LIVE、PTU、EPTUのうち、どのフォルダを削除しますか？ (live/ptu/eptu)"
 
 if /i %CHK%==live (
-  set PLYVER=LIVE
+  SET PLYVER=LIVE
 ) else if /i %CHK%==l (
-  set PLYVER=LIVE
+  SET PLYVER=LIVE
 ) else if /i %CHK%==ptu (
-  set PLYVER=PTU
+  SET PLYVER=PTU
 ) else if /i %CHK%==p (
-  set PLYVER=PTU
+  SET PLYVER=PTU
+) else if /i %CHK%==eptu (
+  SET PLYVER=EPTU
+) else if /i %CHK%==ep (
+  SET PLYVER=EPTU
 ) else (
+  echo.
   echo 予期しない文字が入力されました
-  echo 削除処理を中止します
+  echo 処理を中止します
+  echo.
   pause
   EXIT
 )
