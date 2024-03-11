@@ -32,13 +32,13 @@ https://github.com/Luke-514/StarCitizen_Setting_backup_and_restore
 &emsp;(Engは英語バージョンで言語以外に違いはありません)  
 &emsp;(文字化けする方はUTF8をお使いください)  
 2.&nbsp;任意の場所で実行します  
-3.&nbsp;LIVEかPTU、どちらか消したいバージョンを入力します(l、pでも可)  
+3.&nbsp;LIVE、PTU、EPTUのうち、消したいバージョンを入力します(l、p、epでも可)  
 4.&nbsp;削除対象が表示されるので、YESかNOを入力してください(y、nでも可)  
   
 1.&nbsp;Download the batch file.  
 &emsp;(the Eng version is no different from the Jpn version except for the language)  
 2.&nbsp;Run the file at any location.  
-3.&nbsp;Enter the version you want to erase, either LIVE or PTU (can be l or p)  
+3.&nbsp;Enter the version you want to erase, either LIVE, PTU or EPTU (can be l, p or ep)  
 4.&nbsp;Enter YES or NO when the target for deletion is displayed (can be y or n)  
 
 # 免責事項/Disclaimer
